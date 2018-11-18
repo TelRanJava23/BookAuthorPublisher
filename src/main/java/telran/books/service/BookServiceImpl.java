@@ -112,8 +112,9 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public Iterable<String> getPublishersByAuthor(String authorName) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.getPublishersByAuthor(authorName).stream()
+				.map(p -> p.getPublisherName())
+				.collect(Collectors.toSet());
 	}
 
 }

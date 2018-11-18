@@ -1,5 +1,7 @@
 package telran.books.dao;
 
+import java.util.List;
+
 import telran.books.domain.Author;
 import telran.books.domain.Book;
 import telran.books.domain.Publisher;
@@ -19,5 +21,9 @@ public interface IRepository {
 	Author findAuthor(String authorName);
 	
 	Publisher findPublisher(String publisherName);
+	
+	List<Publisher> getPublishersByAuthor(String authorName);
 
 }
+
+
